@@ -7,11 +7,11 @@ function App() {
   const { ipData, loading, error, fetchIPData } = useIPData();
 
   return (
-    <div>
+    <main>
       <SearchBar onSearch={fetchIPData} />
       <InfoPanel data={ipData} loading={loading} error={error} />
       <MapView data={ipData} />
-    </div>
+    </main>
   );
 }
 
