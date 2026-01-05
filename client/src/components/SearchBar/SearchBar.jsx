@@ -13,14 +13,18 @@ function SearchBar({ onSearch }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="search-form" onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Search for any IP address or domain"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        aria-label="IP address or domain search"
       />
-      <button type="submit">Search</button>
+     <button type="submit" aria-label="Search">
+  <img src="/src/assets/icon-arrow.svg" alt="" />
+</button>
+
     </form>
   );
 }

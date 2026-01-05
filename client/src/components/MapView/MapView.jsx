@@ -12,7 +12,7 @@ function MapView({ data }) {
     <MapContainer
       center={position}
       zoom={13}
-      style={{ height: "400px", width: "100%" }}
+      style={{ height: "100%", width: "100%" }}
     >
       <TileLayer
         attribution='&copy; OpenStreetMap contributors'
