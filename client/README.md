@@ -5,8 +5,8 @@ This project is based on the Frontend Mentor IP Address Tracker challenge.
 
 ## Live Demo
 
-🔗 Live Site: https://your-site-name.netlify.app  
-🔗 GitHub Repository: https://github.com/your-username/react-ip-address-tracker
+Live Site: <https://project-react-development1.netlify.app/>  
+GitHub Repository: <https://github.com/TheBAnalystSN/react-ip-address-tracker.git>
 
 ---
 
@@ -49,7 +49,7 @@ The UI closely follows the Frontend Mentor design specifications.
 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/react-ip-address-tracker.git
+git clone <https://github.com/TheBAnalystSN/react-ip-address-tracker.git>
 
 ```bash 
 cd react-ip-address-tracker/client
