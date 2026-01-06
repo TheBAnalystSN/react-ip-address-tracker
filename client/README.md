@@ -1,32 +1,91 @@
 # IP Address Tracker
 
-This project is a solution to the IP Address Tracker challenge from Frontend Mentor. The application allows users to search for any IP address or domain and view its geographical location on an interactive map.
+A responsive IP Address Tracker application built with React and Leaflet.  
+This project is based on the Frontend Mentor IP Address Tracker challenge.
 
-## Features
+## Live Demo
 
-- Displays the user's current IP address on initial load
-- Search for IP addresses or domains
-- Shows location, timezone, and ISP information
-- Interactive map using Leaflet.js
-- Fully responsive design
+🔗 Live Site: https://your-site-name.netlify.app  
+🔗 GitHub Repository: https://github.com/your-username/react-ip-address-tracker
+
+---
+
+## Overview
+
+This application allows users to:
+
+- View their current IP address and location on initial load
+- Search for any IP address or domain
+- See location data displayed on an interactive map
+- Experience a fully responsive layout across desktop and mobile devices
+
+The UI closely follows the Frontend Mentor design specifications.
+
+---
 
 ## Built With
 
-- React
+- React (JavaScript)
 - Vite
-- JavaScript
-- CSS
-- Leaflet.js
-- IPAPI (no API key required)
+- Leaflet / React-Leaflet
+- CSS (no frameworks)
+- IP Geolocation API (ipapi)
 
-## What I Learned
+---
 
-This project helped strengthen my understanding of React hooks, especially managing async data fetching and side effects. I also gained hands-on experience integrating third-party APIs and mapping libraries while maintaining a clean component structure.
+## Features
 
-## Continued Development
+- Dynamic IP lookup
+- Interactive Leaflet map
+- Custom map marker
+- Responsive design
+- Error handling for invalid input
+- Clean component-based architecture
 
-I would like to further improve error handling and explore performance optimizations for map rendering.
+---
 
-## Author
+## Installation & Local Setup
 
-Dustin Robertson
+1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/react-ip-address-tracker.git
+
+```bash 
+cd react-ip-address-tracker/client
+
+```bash
+npm install
+
+```bash
+npm run dev
+
+The app will run at: 
+
+> client@0.0.0 dev
+> vite
+
+
+  VITE v7.3.0  ready in 2431 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+
+## Deployment
+
+This project is deployed using Netlify
+
+Steps used: 
+
+1. Build the project:
+
+```bash
+npm run build
+
+2. Upload the dist/ folder to Netlify
+
+3. Configure:
+
+-Build command: npm run build
+-Publish directory: dist
