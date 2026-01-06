@@ -1,4 +1,4 @@
-function InfoPanel({ data, loading, error }) {
+export default function InfoPanel({ data, loading, error }) {
   if (loading) return <div className="info-card">Loading...</div>;
   if (error) return <div className="info-card">{error}</div>;
   if (!data) return null;
@@ -26,5 +26,3 @@ function InfoPanel({ data, loading, error }) {
     </div>
   );
 }
-
-export default InfoPanel;

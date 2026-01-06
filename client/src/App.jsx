@@ -3,7 +3,7 @@ import InfoPanel from "./components/InfoPanel/InfoPanel";
 import MapView from "./components/MapView/MapView";
 import useIPData from "./hooks/useIPData";
 
-function App() {
+export default function App() {
   const { ipData, loading, error, fetchIPData } = useIPData();
 
   return (
@@ -23,5 +23,3 @@ function App() {
     </>
   );
 }
-
-export default App;

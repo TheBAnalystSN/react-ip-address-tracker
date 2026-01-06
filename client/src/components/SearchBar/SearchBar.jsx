@@ -1,15 +1,14 @@
 import { useState } from "react";
+import arrowIcon from "../../assets/icon-arrow.svg";
 
-function SearchBar({ onSearch }) {
-  const [query, setQuery] = useState("");
+export default function SearchBar({ onSearch }) {
+  const [value, setValue] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (!query.trim()) return;
-
-    onSearch(query.trim());
-    setQuery("");
+    if (!value.trim()) return;
+    onSearch(value.trim());
+    setValue("");
   };
 
   return (
@@ -17,16 +16,12 @@ function SearchBar({ onSearch }) {
       <input
         type="text"
         placeholder="Search for any IP address or domain"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        aria-label="IP address or domain search"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
       />
-     <button type="submit" aria-label="Search">
-  <img src="/src/assets/icon-arrow.svg" alt="" />
-</button>
-
+      <button type="submit">
+        <img src={arrowIcon} alt="Search" />
+      </button>
     </form>
   );
 }
-
-export default SearchBar;

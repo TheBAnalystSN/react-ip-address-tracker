@@ -1,30 +1,28 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
+import { MapContainer, TileLayer, Marker, useMap } from "react-leaflet";
+import L from "leaflet";
+import locationIcon from "../../assets/icon-location.svg";
 
-function MapView({ data }) {
-  if (!data || !data.latitude || !data.longitude) {
-    return <p>Map will render here</p>;
-  }
+const icon = new L.Icon({
+  iconUrl: locationIcon,
+  iconSize: [46, 56],
+  iconAnchor: [23, 56],
+});
 
-  const position = [data.latitude, data.longitude];
+function Recenter({ lat, lng }) {
+  const map = useMap();
+  map.setView([lat, lng]);
+  return null;
+}
+
+export default function MapView({ data }) {
+  const lat = data?.latitude || 37.3861;
+  const lng = data?.longitude || -122.0839;
 
   return (
-    <MapContainer
-      center={position}
-      zoom={13}
-      style={{ height: "100%", width: "100%" }}
-    >
-      <TileLayer
-        attribution='&copy; OpenStreetMap contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      <Marker position={position}>
-        <Popup>
-          {data.city}, {data.region}
-        </Popup>
-      </Marker>
+    <MapContainer center={[lat, lng]} zoom={13} style={{ height: "100%" }}>
+      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+      <Marker position={[lat, lng]} icon={icon} />
+      <Recenter lat={lat} lng={lng} />
     </MapContainer>
   );
 }
-
-export default MapView;

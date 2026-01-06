@@ -1,27 +1,37 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-function useIPData() {
+export default function useIPData() {
   const [ipData, setIpData] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const fetchIPData = async (query) => {
-    setLoading(true);
-    setError(null);
-
+  const fetchIPData = async (query = "") => {
     try {
-      const response = await fetch(`https://ipapi.co/${query}/json/`);
-      const data = await response.json();
+      setLoading(true);
+      setError(null);
+
+      const url = query
+        ? `https://ipapi.co/${query}/json/`
+        : `https://ipapi.co/json/`;
+
+      const res = await fetch(url);
+      const data = await res.json();
+
+      if (data.error) {
+        throw new Error();
+      }
 
       setIpData(data);
-    } catch (err) {
-      setError("Unable to fetch IP data");
+    } catch {
+      setError("Invalid IP address or domain");
     } finally {
       setLoading(false);
     }
   };
 
+  useEffect(() => {
+    fetchIPData();
+  }, []);
+
   return { ipData, loading, error, fetchIPData };
 }
-
-export default useIPData;

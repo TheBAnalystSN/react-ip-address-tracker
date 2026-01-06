@@ -1,27 +1,32 @@
-# React IP Address Tracker
+# IP Address Tracker
 
-This project is a React-based IP Address Tracker built as part of the Per Scholas React Development curriculum. The application allows users to search for an IP address or domain name and view its geographic location, timezone, and internet service provider.
+This project is a solution to the IP Address Tracker challenge from Frontend Mentor. The application allows users to search for any IP address or domain and view its geographical location on an interactive map.
 
 ## Features
 
-- Search for any IP address or domain
-- Fetches real-time data using the IPAPI service
-- Displays location details dynamically
-- Interactive map rendered with Leaflet.js
-- Responsive layout for mobile and desktop
-- Accessible form input and semantic structure
+- Displays the user's current IP address on initial load
+- Search for IP addresses or domains
+- Shows location, timezone, and ISP information
+- Interactive map using Leaflet.js
+- Fully responsive design
 
-## Technologies Used
+## Built With
 
 - React
 - Vite
-- JavaScript (ES6)
-- IPAPI
-- Leaflet.js / React Leaflet
+- JavaScript
 - CSS
+- Leaflet.js
+- IPAPI (no API key required)
 
-## Installation and Setup
+## What I Learned
 
-1. Clone the repository
-2. Navigate into the project directory
-3. Install dependencies:
+This project helped strengthen my understanding of React hooks, especially managing async data fetching and side effects. I also gained hands-on experience integrating third-party APIs and mapping libraries while maintaining a clean component structure.
+
+## Continued Development
+
+I would like to further improve error handling and explore performance optimizations for map rendering.
+
+## Author
+
+Dustin Robertson
