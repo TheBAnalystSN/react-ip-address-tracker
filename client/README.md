@@ -89,3 +89,30 @@ npm run build
 
 -Build command: npm run build
 -Publish directory: dist
+
+## Resources
+
+The following resources were used during the development of this project:
+
+Frontend Mentor – Project design files, requirements, and assets
+https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0
+
+React Documentation – Core React concepts, hooks, and component structure
+https://react.dev/
+
+Vite Documentation – Project setup and build configuration
+https://vitejs.dev/
+
+Leaflet & React-Leaflet Documentation – Interactive map implementation
+https://leafletjs.com/
+
+https://react-leaflet.js.org/
+
+IPAPI – Public IP geolocation API used to retrieve IP address data
+https://ipapi.co/
+
+MDN Web Docs – Reference for HTML, CSS, and JavaScript syntax and behavior
+https://developer.mozilla.org/
+
+OpenStreetMap – Map tile provider used with Leaflet
+https://www.openstreetmap.org/
